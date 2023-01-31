@@ -1,0 +1,83 @@
+api call in js
+--------------
+
+AJAX
+    -XMLhttp
+    -fetch
+    -asynch await
+
+
+-in react we use useEffect hook instead of ngOninit in angular
+
+
+Redirection in React
+--------------------
+
+react-router-dom
+
+to install   :  npm i react-router-dom
+
+we need to import this : import { BrowserRouter as Router - all routing need components
+                                ,Routes                   - to set path for each components
+                                ,Route                    - more than one path 
+} from 'react-router-dom';
+
+useParams  -  hook used to access params from component url
+
+
+REDUX
+-----
+
+coupling - many connections between parent and child component
+
+props drilling - in coupling if any intermediate component have any errors all other childs will not work.this problem is known as props drilling.
+
+-To avoid props drilling we need to reduce coupling and make all the components independent
+
+-For this react introduced a new technology - 'STATE MANAGEMENT TECHNOLOGY - REDUX'
+
+
+redux process
+-------------
+
+-create new js file to keep the states , all the components can access the js file
+
+-the components  can access the data from the js file but can't update in js file
+
+logic: 4 pillar are there
+        -data.js
+        -Component 
+        -Action : a file where all the logics to update the state [Dispatch : method used to dispatch the logic in action file when the component need state updation]
+        -Reducer : update the datas in js file according to the payload response get from action file
+
+        [component send a dispatch to the action  it send response as a payload to the reducer which finally modify the data in data.js]
+
+
+Libraries to apply REDUX
+------------------------
+
+1-REDUX
+2-REACT REDUX
+3-REDUX-THUNK
+
+npm i redux react-redux redux-thunk
+
+createStore() - method in REDUX used to create store in js file
+              - 2 arguments are there :
+                1 - reducer
+                2 - middleware (used to make synchronous redux into asynchronous)
+
+applyMiddleware() - method in REDUX used to apply middleware
+
+combineReducers() - method in REDUX used to combine all the reducers in js file
+
+reduxthunk() - in Redux-thunk is  used to create middleware
+
+
+steps:
+1.create store 
+2.Apply the store in index.js  
+    -provider   -  its  a tag used to pass the store (react-redux)
+
+
+         
